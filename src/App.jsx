@@ -1,13 +1,14 @@
-import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { NavBar, ItemListContainer, Counter } from "./components";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+// import { CartProvider } from "./context";
 
 const App = () => {
   return (
     <ChakraProvider>
-      <NavBar />
-      { <ItemListContainer greeting={"Bienvenidos a mi tienda!"} /> }
-      <Counter />
+      {/* <CartProvider> */}
+        <RouterProvider router={router} />
+      {/* </CartProvider> */}
     </ChakraProvider>
   );
 };
